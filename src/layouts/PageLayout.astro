@@ -1,0 +1,52 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/widgets/Header.astro';
+// import Footer from '~/components/widgets/Footer.astro';
+import Announcement from '~/components/widgets/Announcement.astro';
+
+import { headerData, footerData } from '~/navigation';
+
+import type { MetaData } from '~/types';
+
+export interface Props {
+  metadata?: MetaData;
+}
+
+const { metadata } = Astro.props;
+---
+
+<Layout metadata={metadata}>
+  <slot name="announcement">
+    <Announcement />
+  </slot>
+  <slot name="header">
+    <!-- <Header {...headerData} isSticky showRssFeed showToggleTheme />
+    <Fragment slot="header"> -->
+    <Header
+      links={[
+        { text: 'Home', href: '/' },
+        { text: 'About', href: '/#about' },
+        { text: 'Resume', href: '/Steve-Braaksma-resume.pdf' },
+        { text: 'LinkedIn', href: 'https://www.linkedin.com/in/stevebraaksma1/' },
+        // { text: 'Porfolio', href: '#porfolio' },
+        // { text: 'Blog', href: '#blog' },
+        { text: 'Github', href: 'https://github.com/stevebraaksma' },
+      ]}
+      actions={[
+        // {
+        //   text: 'Contact me',
+        //   href: '#',
+        // },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+    <!-- </Fragment> -->
+  </slot>
+  <main>
+    <slot />
+  </main>
+  <!-- <slot name="footer">
+    <Footer {...footerData} />
+  </slot> -->
+</Layout>
