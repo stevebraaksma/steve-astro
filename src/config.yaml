@@ -1,6 +1,6 @@
 site:
   name: Steve Braaksma
-  site: 'https://astrowind.vercel.app'
+  site: 'https://stevebraaksma.com'
   base: '/'
   trailingSlash: false
 
@@ -10,22 +10,18 @@ site:
 metadata:
   title:
     default: Steve Braaksma
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    # template: '%s — Steve Braaksma'
+  description: 'Results-driven software developer with a strong foundation in HTML, CSS and JavaScript. Proficient in the Drupal content management system (CMS) including site building, theming, and custom development.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Steve Braaksma
+    site_name: Steve Braaksma - Software Developer
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
-  twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
-    cardType: summary_large_image
 
 i18n:
   language: en
@@ -69,4 +65,4 @@ analytics:
       id: null # or "G-XXXXXXXXXX"
 
 ui:
-  theme: 'light:only' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

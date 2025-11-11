@@ -12,27 +12,24 @@ import Steps from '~/components/widgets/Steps.astro';
 import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
-  title: 'Steve Braaksma',
+  title: 'Steve Braaksma - Software Developer',
 };
 ---
 
 <Layout metadata={metadata}>
-  <Fragment slot="announcement"></Fragment>
+  <!-- <Fragment slot="announcement"></Fragment> -->
   <Fragment slot="header">
     <Header
       links={[
-        { text: 'Home', href: '/' },
+        { text: 'Home', href: '#' },
         { text: 'About', href: '#about' },
-        // { text: 'Resume', href: '/Steve-Braaksma-resume.pdf' },
+        { text: 'Resume', href: '#resume' },
         { text: 'LinkedIn', href: 'https://www.linkedin.com/in/stevebraaksma1/' },
-        // { text: 'Porfolio', href: '#porfolio' },
-        // { text: 'Blog', href: '#blog' },
-        { text: 'Github', href: 'https://github.com/stevebraaksma' },
       ]}
       actions={[
         {
           text: 'Contact me',
-          href: '/contact',
+          href: '/contact#form',
         },
       ]}
       isSticky
@@ -46,11 +43,11 @@ const metadata = {
     id="hero"
     title="Steve Braaksma"
     tagline="Software Developer"
-    actions={[{ variant: 'primary', text: 'Contact me', href: getPermalink('/contact') }]}
+    actions={[{ variant: 'primary', text: 'Contact me', href: getPermalink('/contact#form') }]}
   >
     <Fragment slot="subtitle">
-      Results-driven software developer with a strong foundation in HTML, CSS and JavaScript.<br />
-      Proficient in the Drupal content management system (CMS) including site building, theming, and custom development.
+      Results-driven software developer with a strong foundation in HTML, CSS and JavaScript. Proficient in the Drupal
+      content management system (CMS) including site building, theming, and custom development.
     </Fragment>
   </Hero>
 
@@ -59,35 +56,9 @@ const metadata = {
   <Content
     id="about"
     columns={3}
-    items={[
-      {
-        icon: 'tabler:brand-dribbble',
-        callToAction: {
-          target: '_blank',
-          text: 'Dribbble',
-          href: '#',
-        },
-      },
-      {
-        icon: 'tabler:brand-behance',
-        callToAction: {
-          target: '_blank',
-          text: 'Behance',
-          href: '#',
-        },
-      },
-      {
-        icon: 'tabler:brand-pinterest',
-        callToAction: {
-          target: '_blank',
-          text: 'Pinterest',
-          href: '#',
-        },
-      },
-    ]}
     image={{
       // src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      src: '~/assets/images/steve-profile.jpg',
+      src: '~/assets/images/steve-portrait-resized-2.jpg',
       alt: 'Colorful Image',
       loading: 'eager',
     }}
@@ -105,8 +76,6 @@ const metadata = {
         In my free time I enjoy floating down rivers and longboarding. I like to balance facing new challenges with
         appreciating simplicity both as an engineer and in my hobbies.
       </p>
-      <!-- <br />
-      <p>If you're curious to dive deeper into my work, you can follow me:</p> -->
     </Fragment>
 
     <Fragment slot="bg">
@@ -122,36 +91,31 @@ const metadata = {
     items={[
       {
         title:
-          'Junior Web Developer <br /> <span class="font-normal">InterVarsity Christian Fellowship, Madison, WI</span> <br /> <span class="text-sm font-normal">2022 - Present</span>',
-        // description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
+          'Web Developer I<br /> <span class="font-normal">InterVarsity Christian Fellowship, Madison, WI</span> <br /> <span class="text-sm font-normal">2024 - Present</span>',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Junior Web Developer <br /> <span class="font-normal">InterVarsity Christian Fellowship, Madison, WI</span> <br /> <span class="text-sm font-normal">2022 - 2024</span>',
         icon: 'tabler:briefcase',
       },
       {
         title:
           'Material Planner <br /> <span class="font-normal">Pro-Active Engineering, Madison, WI</span> <br /> <span class="text-sm font-normal">2019 - 2021</span>',
-        // description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
         icon: 'tabler:briefcase',
       },
 
       {
         title:
           'Quoting Specialist <br /> <span class="font-normal">Pro-Active Engineering, Madison, WI</span> <br /> <span class="text-sm font-normal">2017 - 2019</span>',
-        // description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
         icon: 'tabler:briefcase',
       },
 
       {
         title:
           'Purchasing Manager/Customer Development Manager <br /> <span class="font-normal">Simplex Scientific, Madison, WI</span> <br /> <span class="text-sm font-normal">2013 - 2017</span>',
-        // description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
         icon: 'tabler:briefcase',
       },
-      // {
-      //   title:
-      //     'Production Planner/Purchasing Assistant  <br /> <span class="font-normal">Simplex Scientific, Madison, WI</span> <br /> <span class="text-sm font-normal">2013 - 2013</span>',
-      //   // description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
-      //   icon: 'tabler:briefcase',
-      // },
     ]}
     classes={{ container: 'max-w-3xl' }}
   />
@@ -159,12 +123,11 @@ const metadata = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-    id="resume"
+    id="education"
     title="Education"
     items={[
       {
         title: `Certificate, Software Engineering Immersive <br /> <span class="font-normal">General Assembly, Remote</span> <br />`,
-        // title: `Certificate, Software Engineering Immersive <br /> <span class="font-normal">General Assembly, Remote</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
         icon: 'tabler:school',
       },
       {
@@ -414,7 +377,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Contact me',
-        href: '/contact',
+        href: '/contact#form',
       },
     ]}
   />

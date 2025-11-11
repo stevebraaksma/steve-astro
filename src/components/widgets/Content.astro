@@ -1,10 +1,10 @@
 ---
 import type { Content as Props } from '~/types';
-import Headline from '../ui/Headline.astro';
-import WidgetWrapper from '../ui/WidgetWrapper.astro';
+import Headline from '~/components/ui/Headline.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Image from '~/components/common/Image.astro';
 import Button from '~/components/ui/Button.astro';
-// import ItemGrid from '../ui/ItemGrid.astro';
+import ItemGrid from '~/components/ui/ItemGrid.astro';
 
 const {
   title = await Astro.slots.render('title'),
@@ -54,7 +54,7 @@ const {
           )
         }
 
-        <!-- <ItemGrid
+        <ItemGrid
           items={items}
           columns={columns}
           defaultIcon="tabler:check"
@@ -66,7 +66,7 @@ const {
             icon: 'flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1',
             action: 'text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
           }}
-        /> -->
+        />
       </div>
       <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
         {

@@ -1,8 +1,9 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-// import ContactUs from '~/components/widgets/Contact.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Header from '~/components/widgets/Header.astro';
 
 const metadata = {
   title: 'Contact',
@@ -10,29 +11,54 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: 'Home', href: '/' },
+        { text: 'About', href: '/#about' },
+        { text: 'Resume', href: '/#resume' },
+        { text: 'LinkedIn', href: 'https://www.linkedin.com/in/stevebraaksma1/' },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
   <!-- HeroText Widget ******************* -->
 
   <HeroText tagline="Contact" title="Let's Connect!" />
 
+  <!-- <ContactUs
+    id="form"
+    title="Drop me a message today!"
+    subtitle=""
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
+    }}
+    disclaimer={{
+      label:
+        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+    }}
+    description="Our support team typically responds within 24 business hours."
+  /> -->
+
   <!-- Features2 Widget ************** -->
 
-  <Features2
-    title="Drop me a message today!"
+  <!-- <Features2
+    title="We are here to help!"
     items={[
-      // {
-      //   title: 'General support',
-      //   description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      // },
-      // {
-      //   title: 'Contact sales',
-      //   description:
-      //     'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      // },
-      // {
-      //   title: 'Technical support',
-      //   description:
-      //     'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      // },
       {
         title: 'Phone',
         description: '(608) 235-8881',
@@ -40,12 +66,31 @@ const metadata = {
       },
       {
         title: 'Email',
-        description: 'stevebraaksma1@gmail.com ',
+        description: 'stevebraaksma1@gmail.com',
         icon: 'tabler:mail',
       },
       {
         title: 'Location',
-        description: '3417 Snowy Pkwy, Madison, WI',
+        description: 'Wisconsin, USA',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  /> -->
+  <Features2
+    items={[
+      {
+        title: 'Phone',
+        description: '(608) 235-8881',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description: 'stevebraaksma1@gmail.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Location',
+        description: 'Wisconsin, USA',
         icon: 'tabler:map-pin',
       },
     ]}
